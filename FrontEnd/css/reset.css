@@ -1,0 +1,76 @@
+/* 
+  MODERN CSS RESET
+  Dự án: Web bán hàng Thực phẩm Dinh dưỡng Organic
+*/
+
+/* 1. Sử dụng box-sizing model trực quan hơn */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Loại bỏ margin mặc định */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Cho phép các ứng dụng dựa trên phần trăm chiều cao hoạt động */
+html, body {
+  height: 100%;
+}
+
+/* 4. Thiết lập typography cơ bản và cải thiện khả năng đọc */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Giúp font chữ mượt mà hơn trên MacOS */
+  font-family: sans-serif; /* Font mặc định an toàn */
+}
+
+/* 5. Cải thiện hiển thị media (ảnh, video) */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Kế thừa font cho các form elements */
+input, button, textarea, select {
+  font: inherit;
+  outline: none;
+}
+
+/* 7. Tránh tràn chữ (overflow) */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Reset danh sách (list) nếu không có class */
+ul, ol {
+  list-style: none;
+}
+
+/* 9. Tạo root stacking context cho React/Vue/Angular (nếu sau này bạn dùng Framework) */
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 10. Cấu hình cho người dùng tắt hiệu ứng chuyển động (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 11. Reset thẻ a (liên kết) cơ bản */
+a {
+  text-decoration: none;
+  color: inherit;
+}
